@@ -1,11 +1,11 @@
-<html>
+	<html>
 <head>
     <style>
         body{
-	background-color:lightpink; 
+	background-color:lightpink;
 }
 button{
-    padding-left:50px;
+     padding-left:50px;
     padding-right: 50px;
     padding-bottom: 10px;
     padding-top: 10px;
@@ -19,10 +19,8 @@ button:hover{
 button:active{
 	background-color:floralwhite;
 }
-    
-    #gob {width: 450px; height: 300px; border: dashed white 5px; }
-    
-    
+#gob {width: 450px; height: 300px; border: dashed white 5px; }
+        
 </style>
 
 </head>
@@ -34,8 +32,8 @@ button:active{
 
 
     <h2 id="message">The Button Element</h2>
-    <button type="button" onclick="changeImage1()">Tripe</button>
-    <button type="button" onclick="changeImage2()">Pig's feet</button>
+    <button type="button" onclick="changeImage1()">changeImage1</button>
+    <button type="button" onclick="changeImage2()">changeImage2</button>
 
 
     <script>
@@ -48,7 +46,7 @@ button:active{
             imageElement.src = Image1;
         }
 
-        function echangeImage2() {
+        function changeImage2() {
             var imageElement = document.getElementById("gob");
             imageElement.src = Image2;
             bodyElement.style.backgroundColor = "coral";
@@ -59,15 +57,15 @@ button:active{
         clickedButton();
 
 
-        function changeBGLightcoral() {
+        function changeBGRed() {
             var bodyElement = document.getElementById("BG");
-            bodyElement.style.backgroundColor = "lightcoral";
+            bodyElement.style.backgroundColor = "red";
 
         }
 
-        function changeBGCoral() {
+        function changeBGBlue() {
             var bodyElement = document.getElementById("BG");
-            bodyElement.style.backgroundColor = "coral";
+            bodyElement.style.backgroundColor = "blue";
         }
 
         function clickedButton() {
@@ -76,7 +74,7 @@ button:active{
             // 2.
             var messageElement = document.getElementById("message");
             // 3.
-            messageElement.innerHTML = "YOU HAVE TO CHOOSE " + numberOfClicks + " THINGS.";
+            messageElement.innerHTML = "YOU HAVE CLICKED " + numberOfClicks + " times.";
         }
     </script>
 
