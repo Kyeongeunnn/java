@@ -1,0 +1,87 @@
+<html>
+<head>
+    <style>
+        body{
+	background-color:lightpink; 
+}
+button{
+    padding-left:50px;
+    padding-right: 50px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    color:black;
+    border: solid black 3px;
+    background-color: floralwhite;
+}
+button:hover{
+	background-color:lightyellow;
+}
+button:active{
+	background-color:floralwhite;
+}
+    
+    #gob {width: 450px; height: 300px; border: dashed white 5px; }
+    
+    
+</style>
+
+</head>
+
+<body id="BG">
+
+    <img id="gob" src="https://img.siksinhot.com/place/1374862412936436.png">
+
+
+
+    <h2 id="message">The Button Element</h2>
+    <button type="button" onclick="changeImage1()">Tripe</button>
+    <button type="button" onclick="changeImage2()">Pig's feet</button>
+
+
+    <script>
+        var numberOfClicks = 0;
+        var Image1 = "https://img.siksinhot.com/place/1374862412936436.png";
+        var Image2 = "http://cfile2.uf.tistory.com/image/26095A4453E4667905BC81";
+
+        function changeImage1() {
+            var imageElement = document.getElementById("gob");
+            imageElement.src = Image1;
+        }
+
+        function echangeImage2() {
+            var imageElement = document.getElementById("gob");
+            imageElement.src = Image2;
+            bodyElement.style.backgroundColor = "coral";
+        }
+        var bodyElement = document.getElementById("BG");
+        bodyElement.style.backgroundColor = "lightcoral";
+
+        clickedButton();
+
+
+        function changeBGLightcoral() {
+            var bodyElement = document.getElementById("BG");
+            bodyElement.style.backgroundColor = "lightcoral";
+
+        }
+
+        function changeBGCoral() {
+            var bodyElement = document.getElementById("BG");
+            bodyElement.style.backgroundColor = "coral";
+        }
+
+        function clickedButton() {
+            // 1.
+            numberOfClicks = numberOfClicks + 1;
+            // 2.
+            var messageElement = document.getElementById("message");
+            // 3.
+            messageElement.innerHTML = "YOU HAVE TO CHOOSE " + numberOfClicks + " THINGS.";
+        }
+    </script>
+
+
+
+
+</body>
+</html>
